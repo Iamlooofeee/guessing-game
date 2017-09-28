@@ -8,15 +8,15 @@ class GuessingGame {
     };
 
     guess(){   
-        return Math.ceil((this.max+this.min+1)/2);
+        return Math.round((this.max+this.min)/2);
     };
 
     lower() {
-        this.setRange(this.min,Math.floor((this.max+this.min)/2));
+        this.max = Math.round((this.max+this.min)/2);
     };
 
     greater() {
-        this.setRange(Math.floor((this.max+this.min)/2+1),this.max);
+        this.min = Math.round((this.max+this.min)/2);
     };
 
 }
